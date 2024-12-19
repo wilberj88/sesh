@@ -16,3 +16,4 @@ folium
 streamlit_folium
 streamlit_card
 streamlit_extras
+pytrends
