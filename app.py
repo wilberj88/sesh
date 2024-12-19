@@ -16,6 +16,9 @@ from streamlit_extras.colored_header import colored_header
 import folium
 from streamlit_folium import st_folium
 import time
+import pytrends
+from pytrends.request import TrendReq
+import requests
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
 st.set_page_config(layout="wide", page_title="Demo Sesh by Novus ♬", page_icon="♬")
