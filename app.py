@@ -18,11 +18,11 @@ from streamlit_folium import st_folium
 import time
 
 # SETTING PAGE CONFIG TO WIDE MODE AND ADDING A TITLE AND FAVICON
-st.set_page_config(layout="wide", page_title="Novus Vote 🗳️", page_icon="🗳️")
+st.set_page_config(layout="wide", page_title="Demo Sesh by Novus ♬", page_icon="♬")
 
 #TITULO
-st.title('Mando Día E 🗳️ Novus Vote')
-st.header('Candidatura ____')
+st.title('Mando ♬ Sesh')
+st.header('Music Industry and Artists Management')
 
 validos2023 = 900000
 meta2023 = validos2023*0.36
