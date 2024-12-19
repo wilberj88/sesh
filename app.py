@@ -39,8 +39,8 @@ meta_zona_9 = 7338
 
 
 colored_header(
-    label="Operación Día E",
-    description="29 de Octubre de 2023",
+    label="Real Time Performance",
+    description="Based on Tiktok and other APIs",
     color_name="violet-70",
 )
 current_time = time.ctime()
@@ -48,18 +48,18 @@ st.write("Siendo HOY y AHORA las: ", current_time)
 
 my_grid = grid(3, 3, vertical_align="bottom")
 # Row 1:
-my_grid.selectbox("Indica una Zona", ["Zona 1", "Zona 2", "Zona 3", "Zona 4"])
-my_grid.selectbox("Indica una Edad", ["18a 25 años", "25-45 años", "45-60 años", "+60años"])
+my_grid.selectbox("Indica un País", ["Zona 1", "Zona 2", "Zona 3", "Zona 4"])
+my_grid.selectbox("Indica Artista", ["18a 25 años", "25-45 años", "45-60 años", "+60años"])
 my_grid.selectbox("Indica un Género", ["Mujer", "Hombre", "LGBTQI+"])
 
 # Row 2:
-my_grid.button("Activar Mensajes Equipos", use_container_width=True)
-my_grid.button("Activar Mensajes Electorado General", use_container_width=True)
-my_grid.button("Activar Mensajes Electorado Personalizado", use_container_width=True)
+my_grid.button("General Campañas de Márketing", use_container_width=True)
+my_grid.button("Última Campaña de Márketing", use_container_width=True)
+my_grid.button("Penúltima Campaña de Marketing", use_container_width=True)
 
 
 options = {
-            "title": {"text": "Votos Requeridos"},
+            "title": {"text": "Alcance Campañas HOY por horas"},
             "tooltip": {
                 "trigger": "axis",
                 "axisPointer": {"type": "cross", "label": {"backgroundColor": "#6a7985"}},
@@ -154,9 +154,9 @@ st_echarts(options=options, height="400px")
 
 
 my_grid1 = grid(4, vertical_align="bottom")
-my_grid1.button("Email", use_container_width=True)
-my_grid1.button("Telefonía", use_container_width=True)
-my_grid1.button("Facebook e IG", use_container_width=True)
+my_grid1.button("Push Email", use_container_width=True)
+my_grid1.button("Push Tik Tok", use_container_width=True)
+my_grid1.button("Push Facebook e IG", use_container_width=True)
 my_grid1.button("Google & Youtube", use_container_width=True)
 
 col1, col2, col3, col4 = st.columns(4)
@@ -169,7 +169,7 @@ col4.metric("ID_Google", "950000", "18%")
 col6, col7 = st.columns(2)
 with col6:
     option = {
-        "title": {"text": "Eficacia de la Campaña", "subtext": "Porcentaje Conversión(%)"},
+        "title": {"text": "Eficacia de la Campaña de Marketing", "subtext": "Porcentaje Conversión(%)"},
         "tooltip": {"trigger": "item", "formatter": "{a} <br/>{b} : {c}%"},
         "toolbox": {
             "feature": {
@@ -178,7 +178,7 @@ with col6:
                 "saveAsImage": {},
             }
         },
-        "legend": {"data": ["Contactados", "Interesados", "Persuadidos", "Comprometidos", "Votantes"]},
+        "legend": {"data": ["Contactados", "Interesados", "Oyentes", "Seguidor", "Fan"]},
         "series": [
             {
                 "name": "Contactados",
@@ -192,9 +192,9 @@ with col6:
                     "label": {"position": "inside", "formatter": "{b}预期: {c}%"}
                 },
                 "data": [
-                    {"value": 60, "name": "Persuadidos"},
-                    {"value": 40, "name": "Comprometidos"},
-                    {"value": 20, "name": "Votantes"},
+                    {"value": 60, "name": "Fan"},
+                    {"value": 40, "name": "Seguidor"},
+                    {"value": 20, "name": "Oyentes"},
                     {"value": 80, "name": "Interesados"},
                     {"value": 100, "name": "Contactados"},
                 ],
@@ -211,9 +211,9 @@ with col6:
                     "label": {"position": "inside", "formatter": "{b}实际: {c}%"}
                 },
                 "data": [
-                    {"value": 30, "name": "Persuadidos"},
-                    {"value": 10, "name": "Comprometidos"},
-                    {"value": 5, "name": "Votantes"},
+                    {"value": 30, "name": "Fan"},
+                    {"value": 10, "name": "Seguidor"},
+                    {"value": 5, "name": "Oyentes"},
                     {"value": 50, "name": "Interesados"},
                     {"value": 80, "name": "Contactados"},
                 ],
