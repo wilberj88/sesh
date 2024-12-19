@@ -278,9 +278,9 @@ with col7:
     st_echarts(option, height="500px", key="echarts")
 
 my_grid2 = grid(3, vertical_align="bottom")
-my_grid2.button("Actualizar Ubicación Líderes", use_container_width=True)
-my_grid2.button("Actualizar Ubicación Voluntarios", use_container_width=True)
-my_grid2.button("Actualizar Ubicación Testigos", use_container_width=True)
+my_grid2.button("Oyentes País", use_container_width=True)
+my_grid2.button("Oyentes Género", use_container_width=True)
+my_grid2.button("Oyentes Artista", use_container_width=True)
 
 
 # center on Liberty Bell, add marker
@@ -401,8 +401,8 @@ with colC:
 
 
 colored_header(
-    label="Alarmas Día E",
-    description="29 de Octubre de 2023",
+    label="Alarmas",
+    description="TODAY",
     color_name="violet-70",
 )
 
@@ -421,7 +421,7 @@ with col1:
                 },
                 "progress": {"show": "true", "width": 10},
                 "detail": {"valueAnimation": "true", "formatter": "{value}"},
-                "data": [{"value": 50, "name": "Liquidez"}],
+                "data": [{"value": 50, "name": "Alcance"}],
             }
         ],
     }
@@ -442,7 +442,7 @@ with col2:
                 },
                 "progress": {"show": "true", "width": 10},
                 "detail": {"valueAnimation": "true", "formatter": "{value}"},
-                "data": [{"value": 85, "name": "Endeudamiento"}],
+                "data": [{"value": 85, "name": "Engagement"}],
             }
         ],
     }
@@ -463,7 +463,7 @@ with col3:
                 },
                 "progress": {"show": "true", "width": 10},
                 "detail": {"valueAnimation": "true", "formatter": "{value}"},
-                "data": [{"value": 20, "name": "Solvencia"}],
+                "data": [{"value": 20, "name": "Comments"}],
             }
         ],
     }
@@ -471,12 +471,12 @@ with col3:
 
 
 colored_header(
-    label="Recomendaciones Día E",
-    description="29 de Octubre de 2023",
+    label="Recomendaciones de Márketing Musical",
+    description="PARA MAÑANA",
     color_name="violet-70",
 )
 
 colx, coly, colz = st.columns(3)
-colx = st.checkbox('Territoriales')
-coly = st.checkbox('Generacionales')
-colz = st.checkbox('Orientación Sexual')
+colx = st.checkbox('Territoriales: festivos y días especiales')
+coly = st.checkbox('Climática: condiciones para tus ciudades con mayores oyentes')
+colz = st.checkbox('Por Canales: Redes Sociales, Email & En Vivos')
